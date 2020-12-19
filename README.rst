@@ -38,13 +38,13 @@ PyPI <https://pypi.org/project/adafruit-circuitpython-display_frame/>`_. To inst
 
 .. code-block:: shell
 
-    pip3 install adafruit-circuitpython-display-frame
+    pip3 install circuitpython-display-frame
 
 To install system-wide (this may be required in some cases):
 
 .. code-block:: shell
 
-    sudo pip3 install adafruit-circuitpython-display-frame
+    sudo pip3 install circuitpython-display-frame
 
 To install in a virtual environment in your current project:
 
@@ -53,7 +53,7 @@ To install in a virtual environment in your current project:
     mkdir project-name && cd project-name
     python3 -m venv .env
     source .env/bin/activate
-    pip3 install adafruit-circuitpython-display-frame
+    pip3 install circuitpython-display-frame
 
 Usage Example
 =============
