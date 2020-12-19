@@ -74,6 +74,9 @@ Usage Example
     while True:
         pass
 
+.. image:: example_image.png
+    :alt: Example photo
+
 Contributing
 ============
 
