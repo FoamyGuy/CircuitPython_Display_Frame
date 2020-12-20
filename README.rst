@@ -74,7 +74,7 @@ Usage Example
     while True:
         pass
 
-.. image:: example_image.png
+.. image:: https://github.com/FoamyGuy/CircuitPython_Display_Frame/blob/main/example_image.png?raw=true
     :alt: Example photo
 
 Contributing
