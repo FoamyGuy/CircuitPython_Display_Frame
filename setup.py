@@ -23,7 +23,7 @@ with open(path.join(here, "README.rst"), encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
-    name="adafruit-circuitpython-display-frame",
+    name="circuitpython-display-frame",
     use_scm_version=True,
     setup_requires=["setuptools_scm"],
     description="CircuitPython displayio widget to create a rounded rectangle frame with text label at the top center.",
