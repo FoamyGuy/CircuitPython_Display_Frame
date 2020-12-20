@@ -9,8 +9,8 @@ Introduction
     :target: https://adafru.it/discord
     :alt: Discord
 
-.. image:: https://github.com/foamyguy/Circuitpython_CircuitPython_Display_Frame/workflows/Build%20CI/badge.svg
-    :target: https://github.com/foamyguy/Circuitpython_CircuitPython_Display_Frame/actions
+.. image:: https://github.com/foamyguy/CircuitPython_Display_Frame/workflows/Build%20CI/badge.svg
+    :target: https://github.com/foamyguy/CircuitPython_Display_Frame/actions
     :alt: Build Status
 
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
