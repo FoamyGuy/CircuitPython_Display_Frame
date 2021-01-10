@@ -6,10 +6,8 @@ Make green and purple rectangles and a
 "Hello World" label.
 """
 import displayio
-
-
-from circuitpython_display_frame import Frame
 from blinka_displayio_pygamedisplay import PyGameDisplay
+from circuitpython_display_frame import Frame
 
 
 # Make the display context
