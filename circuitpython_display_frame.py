@@ -40,12 +40,7 @@ from adafruit_display_shapes.roundrect import RoundRect
 
 
 class Frame(displayio.Group):
-    # pylint: disable=too-many-arguments
-
-    LABEL_ALIGN_RIGHT = 2
-    LABEL_ALIGN_CENTER = 1
-    LABEL_ALIGN_LEFT = 0
-
+    # pylint: disable=too-many-arguments,too-many-locals
     """
     A rounded rectangle frame with a text label at the top center.
 
@@ -61,6 +56,9 @@ class Frame(displayio.Group):
     :param stroke: Used for the outline. Will not change the outer bound size set by ``width`` and
                    ``height``.
     """
+    LABEL_ALIGN_RIGHT = 2
+    LABEL_ALIGN_CENTER = 1
+    LABEL_ALIGN_LEFT = 0
 
     def __init__(
         self,
