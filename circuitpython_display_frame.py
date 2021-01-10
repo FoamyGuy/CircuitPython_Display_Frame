@@ -41,6 +41,11 @@ from adafruit_display_shapes.roundrect import RoundRect
 
 class Frame(displayio.Group):
     # pylint: disable=too-many-arguments
+
+    LABEL_ALIGN_RIGHT = 2
+    LABEL_ALIGN_CENTER = 1
+    LABEL_ALIGN_LEFT = 0
+
     """
     A rounded rectangle frame with a text label at the top center.
 
@@ -70,6 +75,8 @@ class Frame(displayio.Group):
         text_color=None,
         background_color=0x0,
         stroke=2,
+        top_label=True,
+        label_align=LABEL_ALIGN_LEFT,
     ):
         super().__init__(x=x, y=y)
 
@@ -96,8 +103,28 @@ class Frame(displayio.Group):
             padding_left=2,
             padding_right=1,
         )
-        self.label.anchor_point = (0.5, 0.5)
-        self.label.anchored_position = (width // 2, 0)
+
+        self.label_align = label_align
+        self.top_label = top_label
+
         if self.label.bounding_box[2] * 2 < width - (corner_radius * 2):
             self.label.scale = 2
+
+        if top_label:
+            _anchored_pos_y = 0
+        else:
+            _anchored_pos_y = height - 6
+
+        if label_align == Frame.LABEL_ALIGN_CENTER:
+            _anchor_x = 0.5
+            _anchored_pos_x = width // 2
+        elif label_align == Frame.LABEL_ALIGN_RIGHT:
+            _anchor_x = 1.0
+            _anchored_pos_x = width - corner_radius
+        else:  # label_align == Frame.LABEL_ALIGN_LEFT:
+            _anchor_x = 0
+            _anchored_pos_x = corner_radius
+
+        self.label.anchor_point = (_anchor_x, 0.5)
+        self.label.anchored_position = (_anchored_pos_x, _anchored_pos_y)
         self.append(self.label)
