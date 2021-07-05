@@ -14,7 +14,7 @@ from circuitpython_display_frame import Frame
 display = PyGameDisplay(icon="", width=800, height=600)
 
 # Make the display context
-main_group = displayio.Group(max_size=10)
+main_group = displayio.Group()
 
 
 example_frame = Frame(20, 20, display.width // 3, display.height - 40)
